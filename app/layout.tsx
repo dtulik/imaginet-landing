@@ -26,7 +26,7 @@ export default function RootLayout({
     <html
     lang="en"
     className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-    <body>
+    <body className="min-h-full flex flex-col bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* BACKGROUND LAYER */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
 

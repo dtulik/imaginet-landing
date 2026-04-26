@@ -53,7 +53,7 @@ export default function Home() {
       </nav>
   
       {/* MAIN CONTENT */}
-      <main className="max-w-5xl mx-auto px-6 py-20">
+      <main className="max-w-5xl mx-auto px-4 md:px-6 py-20 pt-28">
   
         {/* HERO */}
         <motion.section
@@ -107,7 +107,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <div className="h-px w-full bg-white/5 my-20" />
+        <div className="h-px w-full bg-white/10 md:bg-white/5 my-20" />
   
         {/* SERVICES */}
         <motion.section
@@ -129,7 +129,7 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item}
-                className="p-6 rounded-xl bg-white/5 border border-white/10
+                className="p-6 rounded-xl bg-white/5 border border-white/15 md:border-white/15 md:border-white/10
                   backdrop-blur-md hover:bg-white/10 hover:-translate-y-1
                   hover:border-sky-400 transition-all duration-300 ease-out
                   hover:shadow-[0_0_30px_rgba(56,189,248,0.15)]"
