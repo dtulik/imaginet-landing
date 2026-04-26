@@ -1,0 +1,34 @@
+  @import "tailwindcss";
+
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+  }
+
+  #__next-dev-indicator {
+    display: none !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
