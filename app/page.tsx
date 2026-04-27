@@ -38,7 +38,7 @@ export default function Home() {
         </div>
   
           <div className="flex gap-6 text-sm text-white/70">
-            <a href="#services" className="hover:text-white transition">What I work on</a>
+            <a href="#services" className="hover:text-white transition">Expertise</a>
             <a href="#about" className="hover:text-white transition">About</a>
 
             <a
@@ -118,7 +118,7 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-semibold mb-8">What I work on</h2>
+          <h2 className="text-3xl font-semibold mb-8">Expertise</h2>
   
           <div className="grid md:grid-cols-2 gap-6 items-stretch">
             {[
