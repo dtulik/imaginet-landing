@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -57,54 +58,86 @@ export default function Home() {
   
         {/* HERO */}
         <motion.section
-          className="mb-24"
+          className="grid md:grid-cols-2 gap-16 items-center mb-24"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.div
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="w-2 h-2 bg-sky-400 rounded-full opacity-70 mb-6"
-          />
 
-          <p className="text-sm uppercase tracking-widest opacity-60 mb-4">
-            IT Consultant / Software Architect
-          </p>
+          {/* LEFT SIDE */}
+          <div>
 
-          <h1 className="text-6xl font-semibold tracking-tight mb-6 text-white drop-shadow-[0_0_25px_rgba(56,189,248,0.25)]">
-            ImagiNET Dariusz Tulik
-          </h1>
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 4, repeat: Infinity }}
+              className="w-2 h-2 bg-sky-400 rounded-full opacity-70 mb-6"
+            />
 
-          <p className="opacity-60 mb-8">
-            Based in Poland · Enterprise systems · Backend architecture
-          </p>
-  
-          <p className="text-xl text-sky-400 mb-4">
-            I help teams build reliable and scalable backend systems.
-          </p>
-  
-          <p className="opacity-70 mb-8">
-            .NET • Architecture • Problem Solving
-          </p>
-  
-          <div className="flex gap-4">
-            <a
-              href="mailto:dariusz.tulik@gmail.com"
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-500 text-black font-semibold hover:scale-105 transition"
-            >
-              Contact me
-            </a>
+            <p className="text-sm uppercase tracking-widest opacity-60 mb-4">
+              IT Consultant / Software Architect
+            </p>
 
-            <a
-              href="https://www.linkedin.com/in/dariusz-tulik-b58b65a8/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl border border-white/20 text-white hover:border-white/40 transition"
-            >
-              LinkedIn
-            </a>
+            <h1 className="text-5xl lg:text-4xl font-semibold tracking-tight mb-6 text-white leading-tight">
+              ImagiNET Dariusz Tulik
+            </h1>
+
+            <p className="opacity-60 mb-6 max-w-lg">
+              Based in Poland · Enterprise systems · Backend architecture
+            </p>
+
+            <p className="text-l text-sky-400 mb-3">
+              I help teams design and build reliable, scalable backend systems. Focused on backend architecture, performance, and long-term system stability.
+            </p>
+
+            <div className="h-px w-16 bg-white/10 mb-8" />
+
+            <div className="flex gap-4">
+              <a
+                href="mailto:dariusz.tulik@gmail.com"
+                className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-500 text-black font-semibold hover:scale-105 transition"
+              >
+                Contact me
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/dariusz-tulik-b58b65a8/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-xl border border-white/20 text-white hover:border-white/40 transition"
+              >
+                LinkedIn
+              </a>
+            </div>
+
           </div>
+
+          {/* RIGHT SIDE (IMAGE) */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative group isolate"
+          >
+            {/* glow */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-sky-500/20 to-indigo-500/20 blur-2xl rounded-2xl opacity-60 group-hover:opacity-90 transition" />
+
+            {/* image wrapper */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/20">
+              <Image
+                src="/hero.png"
+                alt="Backend systems architecture"
+                width={1200}
+                height={700}
+                className="block w-full h-auto max-h-[320px] md:max-h-none object-cover group-hover:scale-[1.02] transition duration-500"
+              />
+            </div>
+
+            {/* label */}
+            <p className="text-xs opacity-40 mt-3 text-center tracking-wide">
+              Backend architecture • scalability • system design
+            </p>
+          </motion.div>
+
         </motion.section>
 
         <div className="h-px w-full bg-white/10 md:bg-white/5 my-20" />
