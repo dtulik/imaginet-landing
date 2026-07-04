@@ -93,7 +93,7 @@ export default function Home() {
 
             <div className="flex gap-4">
               <a
-                href="mailto:dariusz.tulik@gmail.com"
+                href="mailto:dariusz.tulik@imaginet.pl"
                 className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-500 text-black font-semibold hover:scale-105 transition"
               >
                 Contact me
@@ -134,7 +134,7 @@ export default function Home() {
 
             {/* label */}
             <p className="text-xs opacity-40 mt-3 text-center tracking-wide">
-              Backend architecture • scalability • system design
+              Backend architecture • Scalability • System design
             </p>
           </motion.div>
 
